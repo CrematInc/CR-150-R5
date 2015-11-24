@@ -1,0 +1,1132 @@
+EESchema Schematic File Version 2
+LIBS:Cremat
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:CR-150-R5-cache
+EELAYER 25 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "CR-150-R5 evaluation board for Cremat CR-11X modules"
+Date "Wednesday, April 22, 2015"
+Rev "5"
+Comp "Cremat Inc. http://www.cremat.com/"
+Comment1 "You are free to incorporate this design into your proprietary commercial product."
+Comment2 "This is Open Source Hardware under the MIT license. http://opensource.org/licenses/MIT"
+Comment3 ""
+Comment4 "The CR-150-R5 evaluation board (for CSP modules) sold by Cremat since 2014"
+$EndDescr
+$Comp
+L GNDREF #PWR01
+U 1 1 5535840E
+P 1900 2775
+F 0 "#PWR01" H 1900 2525 50  0001 C CNN
+F 1 "GNDREF" H 1900 2625 40  0000 C CNN
+F 2 "" H 1900 2775 60  0000 C CNN
+F 3 "" H 1900 2775 60  0000 C CNN
+	1    1900 2775
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 1950 2550 2150
+Wire Wire Line
+	2000 1950 2200 1950
+Wire Wire Line
+	2200 1950 2550 1950
+Wire Wire Line
+	2200 2000 2200 1950
+Connection ~ 2200 1950
+Wire Wire Line
+	2200 2350 2200 2300
+Wire Wire Line
+	1900 2350 2125 2350
+Wire Wire Line
+	2125 2350 2200 2350
+Wire Wire Line
+	2200 2350 2250 2350
+Wire Wire Line
+	2550 2550 2550 2675
+Wire Wire Line
+	2550 2675 2825 2675
+Wire Wire Line
+	1900 2425 1900 2350
+Connection ~ 2200 2350
+Wire Wire Line
+	2125 2425 2125 2350
+Connection ~ 2125 2350
+Wire Wire Line
+	1900 2625 1900 2725
+Wire Wire Line
+	1900 2725 1900 2775
+Wire Wire Line
+	1900 2725 2125 2725
+Wire Wire Line
+	2125 2725 2125 2625
+$Comp
+L CR-11X U1
+U 1 1 55358BCF
+P 6675 2500
+F 0 "U1" H 6175 3350 40  0000 L CNN
+F 1 "CR-11X" H 6175 3300 40  0000 L CNN
+F 2 "Cremat_footprints:8pinSIP" H 6350 3525 20  0000 C CNN
+F 3 "" H 6175 3300 60  0000 C CNN
+	1    6675 2500
+	1    0    0    -1  
+$EndComp
+Connection ~ 1900 2725
+$Comp
+L Q_NPN_BEC Q3
+U 1 1 5536BDDC
+P 2450 2350
+F 0 "Q3" H 2625 2375 40  0000 L CNN
+F 1 "MMBT3904" H 2625 2325 40  0000 L CNN
+F 2 "Cremat_footprints:SOT23-3" H 2600 2425 20  0000 L CNN
+F 3 "" H 2450 2350 60  0000 C CNN
+	1    2450 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R11
+U 1 1 553786C9
+P 2200 2150
+F 0 "R11" H 2275 2175 40  0000 L CNN
+F 1 "1.0k" H 2275 2125 40  0000 L CNN
+F 2 "Cremat_footprints:0805" H 2450 2225 20  0000 C CNN
+F 3 "" H 2200 2150 30  0000 C CNN
+	1    2200 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L ZENERsmall D5
+U 1 1 5537892D
+P 2125 2525
+F 0 "D5" V 2125 2375 40  0000 L CNN
+F 1 "7.5V" V 2075 2325 40  0000 L CNN
+F 2 "Cremat_footprints:SOD-323" V 2025 2250 20  0000 C CNN
+F 3 "" H 2125 2525 60  0000 C CNN
+	1    2125 2525
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GNDREF #PWR02
+U 1 1 553792CE
+P 1900 3875
+F 0 "#PWR02" H 1900 3625 50  0001 C CNN
+F 1 "GNDREF" H 1900 3725 40  0000 C CNN
+F 2 "" H 1900 3875 60  0000 C CNN
+F 3 "" H 1900 3875 60  0000 C CNN
+	1    1900 3875
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 3050 2550 3250
+Wire Wire Line
+	1975 3050 2200 3050
+Wire Wire Line
+	2200 3050 2550 3050
+Wire Wire Line
+	2200 3100 2200 3050
+Connection ~ 2200 3050
+Wire Wire Line
+	2200 3450 2200 3400
+Wire Wire Line
+	1900 3450 2125 3450
+Wire Wire Line
+	2125 3450 2200 3450
+Wire Wire Line
+	2200 3450 2250 3450
+Wire Wire Line
+	2550 3650 2550 3775
+Wire Wire Line
+	2550 3775 2875 3775
+Wire Wire Line
+	1900 3525 1900 3450
+Connection ~ 2200 3450
+Connection ~ 2125 3450
+Wire Wire Line
+	1900 3725 1900 3825
+Wire Wire Line
+	1900 3825 1900 3875
+Wire Wire Line
+	1900 3825 2125 3825
+Connection ~ 1900 3825
+$Comp
+L R R12
+U 1 1 553792EE
+P 2200 3250
+F 0 "R12" H 2275 3275 40  0000 L CNN
+F 1 "1.0k" H 2275 3225 40  0000 L CNN
+F 2 "Cremat_footprints:0805" H 2450 3325 20  0000 C CNN
+F 3 "" H 2200 3250 30  0000 C CNN
+	1    2200 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L ZENERsmall D7
+U 1 1 553792F4
+P 2125 3625
+F 0 "D7" V 2125 3700 40  0000 L CNN
+F 1 "7.5V" V 2175 3700 40  0000 L CNN
+F 2 "Cremat_footprints:SOD-323" V 2225 3925 20  0000 C CNN
+F 3 "" H 2125 3625 60  0000 C CNN
+	1    2125 3625
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2125 3825 2125 3725
+Wire Wire Line
+	2125 3525 2125 3450
+$Comp
+L Q_PNP_BEC Q4
+U 1 1 5537943F
+P 2450 3450
+F 0 "Q4" H 2625 3475 40  0000 L CNN
+F 1 "MMBT3906" H 2625 3425 40  0000 L CNN
+F 2 "Cremat_footprints:SOT23-3" H 2600 3525 20  0000 L CNN
+F 3 "" H 2450 3450 60  0000 C CNN
+	1    2450 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X03 J1
+U 1 1 5537B970
+P 1150 2400
+F 0 "J1" H 1350 2600 40  0000 L CNN
+F 1 "power input" H 1075 2650 40  0000 L CNN
+F 2 "Cremat_footprints:3-terminal_block" H 875 2200 20  0000 L CNN
+F 3 "" H 1150 2400 60  0000 C CNN
+	1    1150 2400
+	-1   0    0    1   
+$EndComp
+Text Label 900  2325 0    40   ~ 0
++12V
+Text Label 900  2525 0    40   ~ 0
+-12V
+Text Label 925  2425 0    40   ~ 0
+GND
+Wire Wire Line
+	1350 2500 1600 2500
+Wire Wire Line
+	1600 2500 1600 3050
+Wire Wire Line
+	1600 2300 1350 2300
+Wire Wire Line
+	1600 1950 1600 2300
+Wire Wire Line
+	1350 2400 1475 2400
+Wire Wire Line
+	1475 2400 1475 2625
+$Comp
+L GNDREF #PWR03
+U 1 1 5537BD9F
+P 1475 2625
+F 0 "#PWR03" H 1475 2375 50  0001 C CNN
+F 1 "GNDREF" H 1475 2475 40  0000 C CNN
+F 2 "" H 1475 2625 60  0000 C CNN
+F 3 "" H 1475 2625 60  0000 C CNN
+	1    1475 2625
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDREF #PWR04
+U 1 1 5537C036
+P 6525 4325
+F 0 "#PWR04" H 6525 4075 50  0001 C CNN
+F 1 "GNDREF" H 6525 4175 40  0000 C CNN
+F 2 "" H 6525 4325 60  0000 C CNN
+F 3 "" H 6525 4325 60  0000 C CNN
+	1    6525 4325
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDREF #PWR05
+U 1 1 5537C059
+P 6100 3225
+F 0 "#PWR05" H 6100 2975 50  0001 C CNN
+F 1 "GNDREF" H 6100 3075 40  0000 C CNN
+F 2 "" H 6100 3225 60  0000 C CNN
+F 3 "" H 6100 3225 60  0000 C CNN
+	1    6100 3225
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R8
+U 1 1 5537C1D2
+P 5750 2675
+F 0 "R8" V 5850 2625 40  0000 L CNN
+F 1 "4.7" V 5900 2625 40  0000 L CNN
+F 2 "Cremat_footprints:0805" V 5925 2700 20  0000 C CNN
+F 3 "" H 5750 2675 30  0000 C CNN
+	1    5750 2675
+	0    1    1    0   
+$EndComp
+$Comp
+L R R7
+U 1 1 5537C2B2
+P 5750 3775
+F 0 "R7" V 5850 3725 40  0000 L CNN
+F 1 "4.7" V 5900 3725 40  0000 L CNN
+F 2 "Cremat_footprints:0805" V 5925 3825 20  0000 C CNN
+F 3 "" H 5750 3775 30  0000 C CNN
+	1    5750 3775
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2825 2675 2900 2675
+Wire Wire Line
+	5900 2675 6100 2675
+Wire Wire Line
+	6100 2675 6625 2675
+Wire Wire Line
+	6625 2675 6625 2300
+Wire Wire Line
+	6525 2300 6525 3775
+Wire Wire Line
+	6525 3775 6525 4000
+Wire Wire Line
+	6100 2675 6100 2925
+Connection ~ 6100 2675
+Wire Wire Line
+	6100 3125 6100 3225
+Connection ~ 6525 3775
+Wire Wire Line
+	6525 4200 6525 4325
+$Comp
+L GNDREF #PWR06
+U 1 1 5537C866
+P 6225 2450
+F 0 "#PWR06" H 6225 2200 50  0001 C CNN
+F 1 "GNDREF" H 6225 2300 40  0000 C CNN
+F 2 "" H 6225 2450 60  0000 C CNN
+F 3 "" H 6225 2450 60  0000 C CNN
+	1    6225 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6225 2300 6225 2375
+Wire Wire Line
+	6225 2375 6225 2450
+Wire Wire Line
+	6725 2375 6725 2300
+Wire Wire Line
+	6225 2375 6425 2375
+Wire Wire Line
+	6425 2375 6725 2375
+Connection ~ 6225 2375
+Wire Wire Line
+	6425 2300 6425 2375
+Connection ~ 6425 2375
+$Comp
+L C C10
+U 1 1 5537CAC7
+P 4725 1625
+F 0 "C10" H 4950 1600 40  0000 L CNN
+F 1 "0.01uF" H 4875 1650 40  0000 L CNN
+F 2 "Cremat_footprints:HVcap_on_side" H 4850 1700 20  0000 C CNN
+F 3 "" H 4725 1625 60  0000 C CNN
+	1    4725 1625
+	-1   0    0    1   
+$EndComp
+$Comp
+L GNDREF #PWR07
+U 1 1 5537CACD
+P 4725 1825
+F 0 "#PWR07" H 4725 1575 50  0001 C CNN
+F 1 "GNDREF" H 4725 1675 40  0000 C CNN
+F 2 "" H 4725 1825 60  0000 C CNN
+F 3 "" H 4725 1825 60  0000 C CNN
+	1    4725 1825
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4725 1775 4725 1825
+$Comp
+L C C1
+U 1 1 5537CAF2
+P 5550 2375
+F 0 "C1" V 5725 2350 40  0000 L CNN
+F 1 "0.01uF" V 5675 2225 40  0000 L CNN
+F 2 "Cremat_footprints:HVcap_on_side" V 5425 2350 20  0000 C CNN
+F 3 "" H 5550 2375 60  0000 C CNN
+	1    5550 2375
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R14
+U 1 1 5537CBCC
+P 4375 1300
+F 0 "R14" V 4250 1250 40  0000 L CNN
+F 1 "10M" V 4300 1250 40  0000 L CNN
+F 2 "Cremat_footprints:320" V 4450 1300 20  0000 C CNN
+F 3 "" H 4375 1300 30  0000 C CNN
+	1    4375 1300
+	0    1    1    0   
+$EndComp
+$Comp
+L R R13
+U 1 1 5537CC65
+P 4975 1625
+F 0 "R13" H 5050 1650 40  0000 L CNN
+F 1 "100M" H 5050 1600 40  0000 L CNN
+F 2 "Cremat_footprints:320" H 5225 1700 20  0000 C CNN
+F 3 "" H 4975 1625 30  0000 C CNN
+	1    4975 1625
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R4
+U 1 1 5537CCEB
+P 4975 2025
+F 0 "R4" H 5050 2050 40  0000 L CNN
+F 1 "100M" H 5050 2000 40  0000 L CNN
+F 2 "Cremat_footprints:320" H 5225 2100 20  0000 C CNN
+F 3 "" H 4975 2025 30  0000 C CNN
+	1    4975 2025
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4525 1300 4600 1300
+Wire Wire Line
+	4600 1300 4725 1300
+Wire Wire Line
+	4725 1300 4975 1300
+Wire Wire Line
+	4975 1300 5250 1300
+Wire Wire Line
+	4975 1300 4975 1475
+Wire Wire Line
+	4975 1775 4975 1875
+Wire Wire Line
+	4725 1475 4725 1300
+Connection ~ 4725 1300
+Wire Wire Line
+	4975 2175 4975 2375
+Wire Wire Line
+	3925 2375 4975 2375
+Wire Wire Line
+	4975 2375 5250 2375
+Wire Wire Line
+	5250 2375 5400 2375
+Wire Wire Line
+	5700 2375 5850 2375
+Wire Wire Line
+	5850 2375 6125 2375
+Wire Wire Line
+	6125 2375 6125 2300
+Wire Wire Line
+	5575 850  5850 850 
+Wire Wire Line
+	5850 850  5850 2375
+Connection ~ 5850 2375
+$Comp
+L BNC J2
+U 1 1 5537EF2D
+P 7200 2375
+F 0 "J2" H 7175 2550 40  0000 L CNN
+F 1 "Output" H 7175 2500 40  0000 L CNN
+F 2 "Cremat_footprints:BNC" H 7175 2600 20  0000 L CNN
+F 3 "" H 7200 2375 60  0000 C CNN
+	1    7200 2375
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDREF #PWR08
+U 1 1 5537F255
+P 7200 2650
+F 0 "#PWR08" H 7200 2400 50  0001 C CNN
+F 1 "GNDREF" H 7200 2500 40  0000 C CNN
+F 2 "" H 7200 2650 60  0000 C CNN
+F 3 "" H 7200 2650 60  0000 C CNN
+	1    7200 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7200 2575 7200 2650
+Wire Wire Line
+	3550 850  3650 850 
+Wire Wire Line
+	3650 850  5375 850 
+$Comp
+L BNC J5
+U 1 1 5537F46B
+P 3925 1300
+F 0 "J5" H 3925 1475 40  0000 L CNN
+F 1 "Bias In" H 3775 1425 40  0000 L CNN
+F 2 "Cremat_footprints:BNC" H 3650 1525 20  0000 L CNN
+F 3 "" H 3925 1300 60  0000 C CNN
+	1    3925 1300
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GNDREF #PWR09
+U 1 1 5537F471
+P 3925 1550
+F 0 "#PWR09" H 3925 1300 50  0001 C CNN
+F 1 "GNDREF" H 3925 1400 40  0000 C CNN
+F 2 "" H 3925 1550 60  0000 C CNN
+F 3 "" H 3925 1550 60  0000 C CNN
+	1    3925 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3925 1500 3925 1550
+Wire Wire Line
+	4075 1300 4150 1300
+Wire Wire Line
+	4150 1300 4225 1300
+Wire Wire Line
+	6825 2300 6825 2375
+Wire Wire Line
+	6825 2375 7050 2375
+$Comp
+L BNC J4
+U 1 1 5537FA8F
+P 3400 850
+F 0 "J4" H 3400 1025 40  0000 L CNN
+F 1 "Test Input" H 3175 975 40  0000 L CNN
+F 2 "Cremat_footprints:BNC" H 3125 1075 20  0000 L CNN
+F 3 "" H 3400 850 60  0000 C CNN
+	1    3400 850 
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GNDREF #PWR010
+U 1 1 5537FA95
+P 3400 1100
+F 0 "#PWR010" H 3400 850 50  0001 C CNN
+F 1 "GNDREF" H 3400 950 40  0000 C CNN
+F 2 "" H 3400 1100 60  0000 C CNN
+F 3 "" H 3400 1100 60  0000 C CNN
+	1    3400 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 1050 3400 1100
+$Comp
+L TST J3
+U 1 1 553804EA
+P 3925 2375
+F 0 "J3" V 4100 2525 40  0000 L BNN
+F 1 "detector" V 4025 2350 40  0000 L CNN
+F 2 "Cremat_footprints:SolderPoint" V 4125 2125 20  0000 L CNN
+F 3 "" H 3925 2375 60  0000 C CNN
+	1    3925 2375
+	0    -1   -1   0   
+$EndComp
+Connection ~ 4975 2375
+$Comp
+L C_Small C2
+U 1 1 55381F26
+P 5475 850
+F 0 "C2" V 5300 800 40  0000 L CNN
+F 1 "1pF" V 5350 800 40  0000 L CNN
+F 2 "Cremat_footprints:0805" V 5250 800 20  0000 L CNN
+F 3 "" H 5475 850 60  0000 C CNN
+	1    5475 850 
+	0    1    1    0   
+$EndComp
+$Comp
+L C_Small C11
+U 1 1 553825AF
+P 1900 2525
+F 0 "C11" H 2025 2500 40  0000 L CNN
+F 1 "10uF" H 2000 2550 40  0000 L CNN
+F 2 "Cremat_footprints:1206" H 1800 2450 20  0000 L CNN
+F 3 "" H 1900 2525 60  0000 C CNN
+	1    1900 2525
+	-1   0    0    1   
+$EndComp
+$Comp
+L C_Small C12
+U 1 1 55382B64
+P 1900 3625
+F 0 "C12" H 2025 3600 40  0000 L CNN
+F 1 "10uF" H 2000 3650 40  0000 L CNN
+F 2 "Cremat_footprints:1206" H 1800 3550 20  0000 L CNN
+F 3 "" H 1900 3625 60  0000 C CNN
+	1    1900 3625
+	-1   0    0    1   
+$EndComp
+$Comp
+L C_Small C6
+U 1 1 55382D42
+P 6100 3025
+F 0 "C6" H 6275 3000 40  0000 L CNN
+F 1 "10uF" H 6200 3050 40  0000 L CNN
+F 2 "Cremat_footprints:1206" H 6000 2950 20  0000 L CNN
+F 3 "" H 6100 3025 60  0000 C CNN
+	1    6100 3025
+	-1   0    0    1   
+$EndComp
+$Comp
+L C_Small C5
+U 1 1 55382DB4
+P 6525 4100
+F 0 "C5" H 6700 4075 40  0000 L CNN
+F 1 "10uF" H 6625 4125 40  0000 L CNN
+F 2 "Cremat_footprints:1206" H 6425 4025 20  0000 L CNN
+F 3 "" H 6525 4100 60  0000 C CNN
+	1    6525 4100
+	-1   0    0    1   
+$EndComp
+$Comp
+L D_Small D6
+U 1 1 55383A40
+P 1900 1950
+F 0 "D6" H 1850 2075 40  0000 L CNN
+F 1 "1N4148" H 1850 2025 40  0000 L CNN
+F 2 "Cremat_footprints:SOD-323" H 1925 1875 20  0000 C CNN
+F 3 "" V 1900 1950 60  0000 C CNN
+	1    1900 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 1950 1800 1950
+$Comp
+L D_Small D8
+U 1 1 55384083
+P 1875 3050
+F 0 "D8" H 1875 3125 40  0000 L CNN
+F 1 "1N4148" H 1725 3175 40  0000 L CNN
+F 2 "Cremat_footprints:SOD-323" H 1825 3225 20  0000 C CNN
+F 3 "" V 1875 3050 60  0000 C CNN
+	1    1875 3050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1600 3050 1775 3050
+$Comp
+L R R3
+U 1 1 553CCDFF
+P 3650 1075
+F 0 "R3" H 3725 1100 40  0000 L CNN
+F 1 "47" H 3725 1050 40  0000 L CNN
+F 2 "Cremat_footprints:1206" H 3700 1200 20  0000 C CNN
+F 3 "" H 3650 1075 30  0000 C CNN
+	1    3650 1075
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDREF #PWR011
+U 1 1 553CCE95
+P 3650 1275
+F 0 "#PWR011" H 3650 1025 50  0001 C CNN
+F 1 "GNDREF" H 3650 1125 40  0000 C CNN
+F 2 "" H 3650 1275 60  0000 C CNN
+F 3 "" H 3650 1275 60  0000 C CNN
+	1    3650 1275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 925  3650 850 
+Connection ~ 3650 850 
+Wire Wire Line
+	3650 1225 3650 1275
+$Comp
+L R R2
+U 1 1 553CE027
+P 5250 1800
+F 0 "R2" H 5325 1825 40  0000 L CNN
+F 1 "100M" H 5325 1775 40  0000 L CNN
+F 2 "Cremat_footprints:320" H 5500 1875 20  0000 C CNN
+F 3 "" H 5250 1800 30  0000 C CNN
+	1    5250 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 1300 5250 1650
+Connection ~ 4975 1300
+Wire Wire Line
+	5250 1950 5250 2375
+Connection ~ 5250 2375
+$Comp
+L R R1
+U 1 1 553CE28A
+P 4375 1050
+F 0 "R1" V 4250 1000 40  0000 L CNN
+F 1 "10M" V 4300 1000 40  0000 L CNN
+F 2 "Cremat_footprints:320" V 4450 1050 20  0000 C CNN
+F 3 "" H 4375 1050 30  0000 C CNN
+	1    4375 1050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4225 1050 4150 1050
+Wire Wire Line
+	4150 1050 4150 1300
+Connection ~ 4150 1300
+Wire Wire Line
+	4525 1050 4600 1050
+Wire Wire Line
+	4600 1050 4600 1300
+Connection ~ 4600 1300
+$Comp
+L TST J9
+U 1 1 553D8428
+P 3925 2925
+F 0 "J9" V 4100 3075 40  0000 L BNN
+F 1 "GND" V 4025 3025 40  0000 L CNN
+F 2 "Cremat_footprints:SolderPoint" V 4125 2675 20  0000 L CNN
+F 3 "" H 3925 2925 60  0000 C CNN
+	1    3925 2925
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GNDREF #PWR012
+U 1 1 553D84B4
+P 4000 3025
+F 0 "#PWR012" H 4000 2775 50  0001 C CNN
+F 1 "GNDREF" H 4000 2875 40  0000 C CNN
+F 2 "" H 4000 3025 60  0000 C CNN
+F 3 "" H 4000 3025 60  0000 C CNN
+	1    4000 3025
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3925 2925 4000 2925
+Wire Wire Line
+	4000 2925 4000 3025
+$Comp
+L LM317_SOT223 U3
+U 1 1 5547BE7C
+P 2775 5450
+F 0 "U3" H 2675 5550 40  0000 L CNN
+F 1 "LM317" H 2675 5475 40  0000 L CNN
+F 2 "Cremat_footprints:SOT-223" H 2775 5675 20  0000 C CNN
+F 3 "" H 2775 5450 60  0000 C CNN
+	1    2775 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C8
+U 1 1 5547C4BD
+P 2300 5700
+F 0 "C8" H 2125 5675 40  0000 L CNN
+F 1 "10uF" H 2050 5725 40  0000 L CNN
+F 2 "Cremat_footprints:1206" H 2125 5625 20  0000 L CNN
+F 3 "" H 2300 5700 60  0000 C CNN
+	1    2300 5700
+	-1   0    0    1   
+$EndComp
+$Comp
+L THERMISTOR TH1
+U 1 1 5547C81B
+P 1575 5300
+F 0 "TH1" V 1400 5175 40  0000 L CNN
+F 1 "NTPA7220" V 1475 5175 40  0000 L BNN
+F 2 "Cremat_footprints:200mil" V 1350 5150 20  0000 L CNN
+F 3 "" H 1575 5300 60  0000 C CNN
+	1    1575 5300
+	0    1    1    0   
+$EndComp
+$Comp
+L BARREL_JACK J6
+U 1 1 5547C8B1
+P 975 5400
+F 0 "J6" H 675 5675 40  0000 L CNN
+F 1 "BARREL_JACK" H 675 5625 40  0000 L CNN
+F 2 "Cremat_footprints:barrel_con" H 675 5725 20  0000 L CNN
+F 3 "" H 975 5400 60  0000 C CNN
+	1    975  5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDREF #PWR013
+U 1 1 5548A3BD
+P 4300 4825
+F 0 "#PWR013" H 4300 4575 50  0001 C CNN
+F 1 "GNDREF" H 4300 4675 40  0000 C CNN
+F 2 "" H 4300 4825 60  0000 C CNN
+F 3 "" H 4300 4825 60  0000 C CNN
+	1    4300 4825
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 4000 4950 4200
+Wire Wire Line
+	4400 4000 4600 4000
+Wire Wire Line
+	4600 4000 4950 4000
+Wire Wire Line
+	4600 4050 4600 4000
+Connection ~ 4600 4000
+Wire Wire Line
+	4600 4400 4600 4350
+Wire Wire Line
+	4300 4400 4525 4400
+Wire Wire Line
+	4525 4400 4600 4400
+Wire Wire Line
+	4600 4400 4650 4400
+Wire Wire Line
+	4950 4600 4950 4725
+Wire Wire Line
+	4300 4475 4300 4400
+Connection ~ 4600 4400
+Wire Wire Line
+	4525 4475 4525 4400
+Connection ~ 4525 4400
+Wire Wire Line
+	4300 4675 4300 4775
+Wire Wire Line
+	4300 4775 4300 4825
+Wire Wire Line
+	4300 4775 4525 4775
+Wire Wire Line
+	4525 4775 4525 4675
+Connection ~ 4300 4775
+$Comp
+L Q_NPN_BEC Q1
+U 1 1 5548A3D3
+P 4850 4400
+F 0 "Q1" H 5025 4425 40  0000 L CNN
+F 1 "MMBT3904" H 5025 4375 40  0000 L CNN
+F 2 "Cremat_footprints:SOT23-3" H 5000 4475 20  0000 L CNN
+F 3 "" H 4850 4400 60  0000 C CNN
+	1    4850 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R6
+U 1 1 5548A3D9
+P 4600 4200
+F 0 "R6" H 4675 4225 40  0000 L CNN
+F 1 "1.0k" H 4675 4175 40  0000 L CNN
+F 2 "Cremat_footprints:0805" H 4850 4275 20  0000 C CNN
+F 3 "" H 4600 4200 30  0000 C CNN
+	1    4600 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L ZENERsmall D2
+U 1 1 5548A3DF
+P 4525 4575
+F 0 "D2" V 4525 4425 40  0000 L CNN
+F 1 "7.5V" V 4475 4375 40  0000 L CNN
+F 2 "Cremat_footprints:SOD-323" V 4425 4300 20  0000 C CNN
+F 3 "" H 4525 4575 60  0000 C CNN
+	1    4525 4575
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GNDREF #PWR014
+U 1 1 5548A3E5
+P 4300 6450
+F 0 "#PWR014" H 4300 6200 50  0001 C CNN
+F 1 "GNDREF" H 4300 6300 40  0000 C CNN
+F 2 "" H 4300 6450 60  0000 C CNN
+F 3 "" H 4300 6450 60  0000 C CNN
+	1    4300 6450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 5625 4950 5825
+Wire Wire Line
+	4375 5625 4600 5625
+Wire Wire Line
+	4600 5625 4950 5625
+Wire Wire Line
+	4600 5675 4600 5625
+Connection ~ 4600 5625
+Wire Wire Line
+	4600 6025 4600 5975
+Wire Wire Line
+	4300 6025 4525 6025
+Wire Wire Line
+	4525 6025 4600 6025
+Wire Wire Line
+	4600 6025 4650 6025
+Wire Wire Line
+	4950 6225 4950 6350
+Wire Wire Line
+	4300 6100 4300 6025
+Connection ~ 4600 6025
+Connection ~ 4525 6025
+Wire Wire Line
+	4300 6300 4300 6400
+Wire Wire Line
+	4300 6400 4300 6450
+Wire Wire Line
+	4300 6400 4525 6400
+Connection ~ 4300 6400
+$Comp
+L R R5
+U 1 1 5548A3F9
+P 4600 5825
+F 0 "R5" H 4675 5850 40  0000 L CNN
+F 1 "1.0k" H 4675 5800 40  0000 L CNN
+F 2 "Cremat_footprints:0805" H 4850 5900 20  0000 C CNN
+F 3 "" H 4600 5825 30  0000 C CNN
+	1    4600 5825
+	1    0    0    -1  
+$EndComp
+$Comp
+L ZENERsmall D1
+U 1 1 5548A3FF
+P 4525 6200
+F 0 "D1" V 4525 6275 40  0000 L CNN
+F 1 "7.5V" V 4575 6275 40  0000 L CNN
+F 2 "Cremat_footprints:SOD-323" V 4625 6500 20  0000 C CNN
+F 3 "" H 4525 6200 60  0000 C CNN
+	1    4525 6200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4525 6400 4525 6300
+Wire Wire Line
+	4525 6100 4525 6025
+$Comp
+L Q_PNP_BEC Q2
+U 1 1 5548A407
+P 4850 6025
+F 0 "Q2" H 5025 6050 40  0000 L CNN
+F 1 "MMBT3906" H 5025 6000 40  0000 L CNN
+F 2 "Cremat_footprints:SOT23-3" H 5000 6100 20  0000 L CNN
+F 3 "" H 4850 6025 60  0000 C CNN
+	1    4850 6025
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C4
+U 1 1 5548A442
+P 4300 4575
+F 0 "C4" H 4475 4550 40  0000 L CNN
+F 1 "10uF" H 4400 4600 40  0000 L CNN
+F 2 "Cremat_footprints:1206" H 4200 4500 20  0000 L CNN
+F 3 "" H 4300 4575 60  0000 C CNN
+	1    4300 4575
+	-1   0    0    1   
+$EndComp
+$Comp
+L C_Small C3
+U 1 1 5548A448
+P 4300 6200
+F 0 "C3" H 4475 6175 40  0000 L CNN
+F 1 "10uF" H 4400 6225 40  0000 L CNN
+F 2 "Cremat_footprints:1206" H 4200 6125 20  0000 L CNN
+F 3 "" H 4300 6200 60  0000 C CNN
+	1    4300 6200
+	-1   0    0    1   
+$EndComp
+$Comp
+L D_Small D3
+U 1 1 5548A45A
+P 4300 4000
+F 0 "D3" H 4250 4125 40  0000 L CNN
+F 1 "1N4148" H 4250 4075 40  0000 L CNN
+F 2 "Cremat_footprints:SOD-323" H 4325 3925 20  0000 C CNN
+F 3 "" V 4300 4000 60  0000 C CNN
+	1    4300 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 4000 4200 4000
+$Comp
+L D_Small D4
+U 1 1 5548A461
+P 4275 5625
+F 0 "D4" H 4275 5700 40  0000 L CNN
+F 1 "1N4148" H 4125 5750 40  0000 L CNN
+F 2 "Cremat_footprints:SOD-323" H 4225 5800 20  0000 C CNN
+F 3 "" V 4275 5625 60  0000 C CNN
+	1    4275 5625
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4025 5625 4175 5625
+$Comp
+L R R9
+U 1 1 5548B24F
+P 2775 6000
+F 0 "R9" H 2850 6025 40  0000 L CNN
+F 1 "4.02k" H 2850 5975 40  0000 L CNN
+F 2 "Cremat_footprints:1206" H 3025 6075 20  0000 C CNN
+F 3 "" H 2775 6000 30  0000 C CNN
+	1    2775 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R10
+U 1 1 5548B31F
+P 3225 5550
+F 0 "R10" H 3300 5575 40  0000 L CNN
+F 1 "240" H 3300 5525 40  0000 L CNN
+F 2 "Cremat_footprints:0805" H 3475 5625 20  0000 C CNN
+F 3 "" H 3225 5550 30  0000 C CNN
+	1    3225 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3225 5700 3225 5825
+Wire Wire Line
+	3225 5825 2775 5825
+Wire Wire Line
+	2775 5800 2775 5825
+Wire Wire Line
+	2775 5825 2775 5850
+Connection ~ 2775 5825
+Wire Wire Line
+	3225 5400 3225 5300
+Wire Wire Line
+	3175 5300 3225 5300
+Wire Wire Line
+	3225 5300 3525 5300
+Wire Wire Line
+	3525 5300 3700 5300
+Wire Wire Line
+	3700 5300 4075 5300
+Wire Wire Line
+	1825 5300 1875 5300
+Wire Wire Line
+	1875 5300 2300 5300
+Wire Wire Line
+	2300 5300 2375 5300
+Wire Wire Line
+	1875 5550 1875 5300
+Connection ~ 1875 5300
+Wire Wire Line
+	2300 5600 2300 5300
+Connection ~ 2300 5300
+Wire Wire Line
+	1875 5850 1875 6200
+Wire Wire Line
+	4025 6200 3525 6200
+Wire Wire Line
+	3525 6200 2775 6200
+Wire Wire Line
+	2775 6200 2300 6200
+Wire Wire Line
+	2300 6200 1875 6200
+Wire Wire Line
+	1875 6200 1425 6200
+Wire Wire Line
+	2775 6200 2775 6150
+Wire Wire Line
+	2300 5800 2300 6200
+Connection ~ 2300 6200
+Wire Wire Line
+	1325 5300 1275 5300
+Wire Wire Line
+	1275 5500 1425 5500
+Wire Wire Line
+	1425 5500 1425 6200
+Connection ~ 1875 6200
+$Comp
+L C_Small C9
+U 1 1 5548BF00
+P 3525 5700
+F 0 "C9" H 3350 5675 40  0000 L CNN
+F 1 "10uF" H 3275 5725 40  0000 L CNN
+F 2 "Cremat_footprints:1206" H 3250 5775 20  0000 L CNN
+F 3 "" H 3525 5700 60  0000 C CNN
+	1    3525 5700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3525 6200 3525 5800
+Connection ~ 2775 6200
+Wire Wire Line
+	3525 5300 3525 5600
+Connection ~ 3225 5300
+$Comp
+L TLE2426 U2
+U 1 1 5548C9FC
+P 4275 5050
+F 0 "U2" H 4500 4750 40  0000 L CNN
+F 1 "TLE2426" H 4500 4700 40  0000 L CNN
+F 2 "Cremat_footprints:SO8" H 4500 4800 20  0000 L CNN
+F 3 "" H 4275 5050 60  0000 C CNN
+	1    4275 5050
+	1    0    0    -1  
+$EndComp
+Connection ~ 3525 5300
+Wire Wire Line
+	4075 5200 4025 5200
+Wire Wire Line
+	4025 5200 4025 5625
+Wire Wire Line
+	4025 5625 4025 6200
+Connection ~ 3525 6200
+$Comp
+L GNDREF #PWR015
+U 1 1 5548D7C9
+P 3875 5400
+F 0 "#PWR015" H 3875 5150 50  0001 C CNN
+F 1 "GNDREF" H 3875 5250 40  0000 C CNN
+F 2 "" H 3875 5400 60  0000 C CNN
+F 3 "" H 3875 5400 60  0000 C CNN
+	1    3875 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4075 5100 3875 5100
+Wire Wire Line
+	3875 5100 3875 5400
+NoConn ~ 5225 5100
+Wire Wire Line
+	3700 4000 3700 5300
+Connection ~ 3700 5300
+Connection ~ 4025 5625
+Wire Wire Line
+	2900 2675 5375 2675
+Wire Wire Line
+	5375 2675 5600 2675
+Wire Wire Line
+	5900 3775 6525 3775
+Wire Wire Line
+	3050 3775 5525 3775
+Wire Wire Line
+	5525 3775 5600 3775
+Wire Wire Line
+	2875 3775 3050 3775
+Wire Wire Line
+	4950 4725 5375 4725
+Wire Wire Line
+	5375 4725 5375 2675
+Connection ~ 5375 2675
+Wire Wire Line
+	4950 6350 5525 6350
+Wire Wire Line
+	5525 6350 5525 3775
+Connection ~ 5525 3775
+$Comp
+L CP1 C7
+U 1 1 5549FBF0
+P 1875 5700
+F 0 "C7" H 2000 5725 40  0000 L CNN
+F 1 "1000uF" H 2000 5675 40  0000 L CNN
+F 2 "Cremat_footprints:large_electrolytic_SMT" H 1650 5600 20  0000 L CNN
+F 3 "" H 1875 5700 60  0000 C CNN
+	1    1875 5700
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
